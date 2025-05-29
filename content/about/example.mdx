@@ -3,10 +3,9 @@ title: "Markdown Example"
 description: Demonstration content with Markdown and Components using the MDX library
 navigation: "about"
 referencedManifests:
-  - "https://api.dc.library.northwestern.edu/api/v2/works/84aec8c1-42e8-4e2c-a6b2-1c7e3790217f?as=iiif"
-  - "https://api.dc.library.northwestern.edu/api/v2/works/cd5e1b9c-370b-40e5-b3d9-defc1d8e0777?as=iiif"
-  - "https://api.dc.library.northwestern.edu/api/v2/works/15871197-1616-4c37-9257-b0ad0dc5ab30?as=iiif"
-  - "https://api.dc.library.northwestern.edu/api/v2/works/14a6aa15-9e12-47a7-9617-91f430d4f47b?as=iiif"
+  - "https://api.dc.library.northwestern.edu/api/v2/works/e8d18423-1148-4186-8562-7dc056835d77?as=iiif"
+  - "https://api.dc.library.northwestern.edu/api/v2/works/f63d18b1-670e-4a2a-8b79-57e95588dcbc?as=iiif"
+  - "https://api.dc.library.northwestern.edu/api/v2/works/29832c6d-b5db-4e44-be81-54062fada10e?as=iiif"
 ---
 
 # Markdown Example
@@ -43,7 +42,7 @@ When authoring markdown content, users can reference IIIF Manifests in front mat
 
 Users authoring content can bring a pan-zoom compatible IIIF Viewer into their content by using the `<Viewer />` component. The viewer will automatically be sized to the width of the content container.
 
-<Viewer iiifContent="https://api.dc.library.northwestern.edu/api/v2/works/cd5e1b9c-370b-40e5-b3d9-defc1d8e0777?as=iiif" />
+<Viewer iiifContent="https://api.dc.library.northwestern.edu/api/v2/works/a4062f00-9109-4ebc-8581-c0a195005a34?as=iiif" />
 
 ## Inserting a IIIF Image (Single Image)
 
@@ -51,8 +50,8 @@ Users can also add a single IIIF Image to their content by using the `<Image />`
 
 <Image
   height="400px"
-  src="https://iiif.dc.library.northwestern.edu/iiif/2/edf54840-38c9-4a00-b180-0c038d77c6d2/full/1200,/0/default.jpg"
-  label="List of Plates: Volume Eight: Edward S. Curtis's The North American Indian"
+  src="https://iiif.dc.library.northwestern.edu/iiif/3/40f345d1-a383-4782-9169-38e3ba6805c8/full/2000,/0/default.jpg"
+  label="Amanda Pauline Ericksson Brandt Aldridg"
 />
 
 ## Inserting a Card
@@ -69,30 +68,44 @@ The `<Viewer />` component can be used to display a faceted IIIF Collection by p
 
 ### Viewer Component
 
-<Viewer iiifContent="https://canopy-iiif.github.io/canopy-iiif/api/facet/date/1910.json" />
+<Viewer iiifContent="https://mathewjordan.github.io/iiif-conference-2025-canopy/api/facet/date/1950s.json" />
 
 ### Slider Component
 
 These can alternatively be rendered in `<Slider />` component.
 
-<Slider iiifContent="https://canopy-iiif.github.io/canopy-iiif/api/facet/date/1910.json" />
+<Slider iiifContent="https://mathewjordan.github.io/iiif-conference-2025-canopy/api/facet/date/1950s.json" />
 
 ## Example MDX
 
 ```jsx
 ---
 title: "Markdown Example"
+description: Demonstration content with Markdown and Components using the MDX library
 navigation: "about"
 referencedManifests:
-  - "https://api.dc.library.northwestern.edu/api/v2/works/84aec8c1-42e8-4e2c-a6b2-1c7e3790217f?as=iiif"
-  - "https://api.dc.library.northwestern.edu/api/v2/works/cd5e1b9c-370b-40e5-b3d9-defc1d8e0777?as=iiif"
-  - "https://api.dc.library.northwestern.edu/api/v2/works/15871197-1616-4c37-9257-b0ad0dc5ab30?as=iiif"
-  - "https://api.dc.library.northwestern.edu/api/v2/works/14a6aa15-9e12-47a7-9617-91f430d4f47b?as=iiif"
+  - "https://api.dc.library.northwestern.edu/api/v2/works/e8d18423-1148-4186-8562-7dc056835d77?as=iiif"
+  - "https://api.dc.library.northwestern.edu/api/v2/works/f63d18b1-670e-4a2a-8b79-57e95588dcbc?as=iiif"
+  - "https://api.dc.library.northwestern.edu/api/v2/works/29832c6d-b5db-4e44-be81-54062fada10e?as=iiif"
 ---
 
 # Markdown Example
 
-Canopy IIIF is designed to work with Markdown using the [MDX](https://mdxjs.com/) library. This allows us to use React components in our Markdown content. This example page demonstrates the various components that are available for use in Markdown content, front matter, and compatible Canopy components that can augment and create links betwen your Markdown content and the IIIF Manifests contained in your source IIIF Collection. This page is output from the `/content/about/example.mdx` file.
+Canopy IIIF is designed to work with Markdown using the [MDX](https://mdxjs.com/) library. This allows you to use Canopy defined components in our Markdown content to easily extend IIIF resources.
+This example page demonstrates some of components that are available for use reuse and remixing content in Markdown.
+
+This page is output from the `/content/about/example.mdx` file.
+
+<ButtonWrapper>
+  <Button
+    children="Read Markdown Guide"
+    href="https://canopy-iiif.github.io/docs/create-markdown-content"
+    target="_blank"
+    buttonType="primary"
+  />
+</ButtonWrapper>
+
+## Example Markdown
 
 Using generated Latin, a sample blockquote and paragraph is included below.
 
@@ -110,7 +123,7 @@ When authoring markdown content, users can reference IIIF Manifests in front mat
 
 Users authoring content can bring a pan-zoom compatible IIIF Viewer into their content by using the `<Viewer />` component. The viewer will automatically be sized to the width of the content container.
 
-<Viewer iiifContent="https://api.dc.library.northwestern.edu/api/v2/works/cd5e1b9c-370b-40e5-b3d9-defc1d8e0777?as=iiif" />
+<Viewer iiifContent="https://api.dc.library.northwestern.edu/api/v2/works/a4062f00-9109-4ebc-8581-c0a195005a34?as=iiif" />
 
 ## Inserting a IIIF Image (Single Image)
 
@@ -118,8 +131,8 @@ Users can also add a single IIIF Image to their content by using the `<Image />`
 
 <Image
   height="400px"
-  src="https://iiif.dc.library.northwestern.edu/iiif/2/edf54840-38c9-4a00-b180-0c038d77c6d2/full/1200,/0/default.jpg"
-  label="List of Plates: Volume Eight: Edward S. Curtis's The North American Indian"
+  src="https://iiif.dc.library.northwestern.edu/iiif/3/40f345d1-a383-4782-9169-38e3ba6805c8/full/2000,/0/default.jpg"
+  label="Amanda Pauline Ericksson Brandt Aldridg"
 />
 
 ## Inserting a Card
@@ -136,11 +149,11 @@ The `<Viewer />` component can be used to display a faceted IIIF Collection by p
 
 ### Viewer Component
 
-<Viewer iiifContent="/api/facet/date/1910.json" />
+<Viewer iiifContent="https://mathewjordan.github.io/iiif-conference-2025-canopy/api/facet/date/1950s.json" />
 
 ### Slider Component
 
 These can alternatively be rendered in `<Slider />` component.
 
-<Slider iiifContent="/api/facet/date/1910.json" />
+<Slider iiifContent="https://mathewjordan.github.io/iiif-conference-2025-canopy/api/facet/date/1950s.json" />
 ```

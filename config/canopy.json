@@ -1,0 +1,13 @@
+{
+  "collection": "https://api.dc.library.northwestern.edu/api/v2/search?query=ira+aldridge+AND+genre.label%3A%22photographs%22&size=200&as=iiif",
+  "label": "Ira Aldridge Photographs",
+  "summmary": "A collection of photographs related to Ira Aldridge, an African American actor and playwright known for his work in the 19th century.",
+  "metadata": ["Subject", "Date", "Dimensions", "Genre"],
+  "featured": [
+    "https://api.dc.library.northwestern.edu/api/v2/works/c23d2027-f104-428e-97cf-ced0129c37b4?as=iiif"
+  ],
+  "theme": {
+    "defaultTheme": "dark",
+    "accentColor": "blue"
+  }
+}
